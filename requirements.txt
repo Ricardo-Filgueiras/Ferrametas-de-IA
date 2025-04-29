@@ -3,4 +3,3 @@ langchain-openai
 langchain-community
 python-dotenv
 langchain-google-genai
-faiss-gpu

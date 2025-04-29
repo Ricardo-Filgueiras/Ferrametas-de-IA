@@ -14,7 +14,7 @@ load_dotenv()
 
 loader = CSVLoader(file_path="dadosbasev1.csv" , encoding="utf-8")
 documents = loader.load()
-print(f"Total de documentos: {len(documents)}")
+print(f"Concatado com sucesso a base de dados {len(documents)} documentos.")
 
 
 embeddings = GoogleGenerativeAIEmbeddings( google_api_key=os.getenv("GOOGLE_API_KEY") , model="models/embedding-001")
@@ -71,7 +71,7 @@ def conversar_com_modelo(pergunta):
             break
 
         # Solicita nova pergunta
-        pergunta = input("Digite sua pergunta: ")
+        # pergunta = input("Digite sua pergunta: ")
 
 if __name__ == "__main__":
     conversar_com_modelo("Qual sua pergunta ?")
